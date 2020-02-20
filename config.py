@@ -1,0 +1,25 @@
+REDIS_HOST = '*'  # Redis数据库地址
+REDIS_PORT = 6379  # Redis端口
+REDIS_PASSWORD = '*'  # Redis密码，如无填None
+REDIS_DB = 1  # Redis数据库编号
+REDIS_URL = '*'  # Redis连接URL
+QQ = '2337956208'  # Redis键值对
+
+# mysql configuration
+MYSQL_HOST = '*'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = '*'
+MYSQL_PORT = 3306
+
+MYSQL_TABLE_ZHUANKER_FORUM = 'zhuanker_forum'
+# zhuanker论坛
+SQL_CREATE_ZHUANKER_FORUM_TABLE = """
+CREATE TABLE IF NOT EXISTS {}(
+id VARCHAR(25) NOT NULL,
+title VARCHAR(510) NOT NULL,
+url VARCHAR(255) NOT NULL,
+dt VARCHAR(50) NOT NULL,
+PRIMARY KEY(id)
+)ENGINE=INNODB CHARSET=UTF8
+""".format(MYSQL_TABLE_ZHUANKER_FORUM)
+MYSQL_DATABASE = '*'
